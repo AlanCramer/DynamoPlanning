@@ -1,0 +1,14 @@
+{
+  "name": "node-and-dynamo",
+  "version": "0.0.0",
+  "description": "Official Amazon tutorial app for Node.js and DynamoDB",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Richard Treichel",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.6.11"
+  }
+}
