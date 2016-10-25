@@ -1,0 +1,43 @@
+
+From https://aws.amazon.com/dynamodb/getting-started/
+Design Patterns and Best Practices
+
+  Cost Optimizing
+    Understand and do not "mix" Hot and Cold Data.
+    If you have data that needs high throughput, create a table for that.
+
+  Querying for Large Items
+    Example: Messaging app
+        Partition Key === Recipient (not unique!)
+        Sort Key === Date
+
+  You want a fast query? You'll need a new GSI.
+  But you only get 5. So you've got a problem!
+
+  Composite Key ... combine two attributes into one
+
+  Sharding - make a set of tables for one table
+    trading off read ease/efficiency/cost for write throughput
+
+  Streams
+    24 hour access to a log like functionality
+    Enables replication
+
+  Streams Lambda Integration
+    java/js/python
+
+  Triggers
+    Derivative table maintenance
+    Cache to alleviate Reads
+    Search indicies
+    email or other notification
+
+  Comments:
+    Less excited than ever for dynamodb ?
+      Not how to use 'correctly'
+      Maybe not easy to fix a bad draft
+      Costs seem hidden everywhere
+        Every report generation is a Read cost
+        Every sensor is a put cost
+
+    The GSI limit is avoided by derivative tables (?)
